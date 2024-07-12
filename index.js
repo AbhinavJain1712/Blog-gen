@@ -14,7 +14,7 @@ const app = express();
 
 app.use(cors(
   {
-        origin: ["https://blog-gen-2ojf.onrender.com"],
+        origin: ["http://localhost:3000"],
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }

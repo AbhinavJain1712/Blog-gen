@@ -1,7 +1,6 @@
 
 import Post from '../model/post.js';
 
-
 export const createPost = async (request, response) => {
     try {
         const post = await new Post(request.body);
@@ -51,7 +50,7 @@ export const getPost = async (request, response) => {
 
         return response.status(200).json(post);
     } catch (error) {
-        return response.status(500).json(error)
+        return response.status(500).json(error);
     }
 }
 
@@ -69,6 +68,6 @@ export const getAllPosts = async (request, response) => {
             
             return response.status(200).json(posts);
     } catch (error) {
-        return response.status(500).json({msg:error.message})
+        return response.status(500).json({msg:error.message});
     }
 }

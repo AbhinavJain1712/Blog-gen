@@ -23,12 +23,10 @@ export const singupUser = async (request, response) => {
         return response.status(500).json({ msg: 'Error while signing up user' });
     }
 }
-
-
 export const loginUser = async (request, response) => {
     let user = await User.findOne({ username: request.body.username });
     if (!user) {
-        return response.status(400).json({ msg: 'Username does not match' });
+        return response.status(400).json({ msg: 'Username does not match'});
     }
 
     try {

@@ -14,7 +14,8 @@ const app = express();
 
 app.use(cors(
   {
-        origin: ["https://blog-gen-ruddy.vercel.app"],
+         origin: ["https://blog-gen-main.netlify.app"],
+        //  origin: ["http://localhost:3000"],
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
